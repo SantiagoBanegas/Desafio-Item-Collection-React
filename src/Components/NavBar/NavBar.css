@@ -1,0 +1,21 @@
+*{margin: 0px;}
+
+.navBar{
+    background-color:green;
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column;
+    }
+
+.tituloPag{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+} 
+
+.menuNav{
+    display: flex;
+    justify-content: space-evenly;
+} 
+
