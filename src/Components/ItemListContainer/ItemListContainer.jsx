@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react";
 import Card from "./Card";
 import "../ItemListContainer/ItemListContainercss.css";
-import getItems  from "../../Services/mockAPI";
+import {getItems, getItemsByCategoria}  from "../../Services/firestore";
 import {useParams} from "react-router-dom";
-import getItemsByCategoria from "../../Services/mockAPI";
+// import getItemsByCategoria from "../../Services/mockAPI";
 import { DotSpinner } from '@uiball/loaders'
 
 
@@ -22,7 +22,7 @@ function ItemListContainer() {
             }
             else{
                 getItemsByCategoria(cat)
-                    .then((respuestaDatos) => setData(respuestaDatos))
+                    .then((respuestaDatosFiltrados) => setData(respuestaDatosFiltrados))
                     .finally(() => setIsLoading(false));
             }
         }, [cat]);

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { getSinlgeItems } from '../../Services/mockAPI';
+import { getSinlgeItems } from '../../Services/firestore';
 import CardDetail from './CardDetail';
 import {useParams} from "react-router-dom";
 import { DotSpinner } from '@uiball/loaders'
